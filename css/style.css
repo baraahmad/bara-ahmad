@@ -25,6 +25,7 @@ body {
 
 h1{
   font-size: 2em !important;
+  margin: 0;
 }
 
 .watermark{
@@ -154,6 +155,9 @@ i{
     display: inline-block;
     margin-left: 40px;
     cursor: pointer;
+}
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  text-decoration: none;
 }
 .nav-links a{
     padding: 16px 0;
@@ -334,7 +338,7 @@ h3.main-hero-subtitle{
 
 
 .about-me-left, .about-me-right{
-    padding: 50px;
+    padding: 0px 50px 0px 50px
 }
 
 
@@ -350,6 +354,14 @@ h3.main-hero-subtitle{
 .about-me-left-container{
     position: relative;
     z-index: 0;
+}
+
+.about-me-left-container, .about-me-right-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
 }
 
 .about-me-right{
@@ -466,7 +478,9 @@ h3.main-hero-subtitle{
     width: 40px;
     height: 50px;
     cursor: pointer;
-    float: right;
+    position: absolute;
+    right: 5px;
+    top: 5px;
   }
   
   .leftright{
@@ -561,6 +575,22 @@ h3.main-hero-subtitle{
 
 
   @media (max-width: 600px) {
+    .nav-logo img{
+      height: 60px;
+      width: 60px;
+    }
+    .nav-logo{
+      padding-left: 10px;
+    }
+    .mobile-toggle{
+      padding-right: 10px;
+    }
+    h1{
+      font-size: 1.6em !important;
+    }
+    h3.main-hero-subtitle{
+      font-size: 1.2em;
+    }
     .mobile-menu-icon{
         display: inline-block;
         width: 42px;
@@ -581,7 +611,7 @@ h3.main-hero-subtitle{
         z-index: 45;
         display: block;
     }
-    .mobile-nav-show::before{
+    /* .mobile-nav-show::before{
         transition-delay: .25s;
         background-color: #f06449;
         background: linear-gradient(270deg, #f06449, #ee2828);
@@ -606,7 +636,7 @@ h3.main-hero-subtitle{
         transition: -webkit-transform .45s cubic-bezier(.694,.048,.335,1);
         transition: transform .45s cubic-bezier(.694,.048,.335,1);
         transition: transform .45s cubic-bezier(.694,.048,.335,1), -webkit-transform .45s cubic-bezier(.694,.048,.335,1);
-    }
+    } */
    .mobile-nav-links{
     list-style: none;
     color: #F0EDCF;
@@ -619,11 +649,29 @@ h3.main-hero-subtitle{
     width: 100vw;
    }
 
+   .mobile-nav-links a,.mobile-nav-links a:link,.mobile-nav-links a:visited,.mobile-nav-links a:focus,.mobile-nav-links a:hover,.mobile-nav-links a:active{
+    color: #F0EDCF;
+    text-decoration: none; 
+  }
+  .content{
+    padding-left: 60px;
+  }
+  .experience-title{
+    align-self: baseline;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
     .about-me-left, .about-me-right{
         padding: 20px;
-        height: 40%;
         overflow: hidden;
     }
+    .about-me-left{
+      height: 50%;
+    }
+    .about-me-text{
+      height: 100%;
+    }
+  
     .about-me-left-container{
         height: 100%;
         overflow-y: auto;
@@ -635,6 +683,15 @@ h3.main-hero-subtitle{
     }
     #Experience .experience-main{
       padding: 0px;
+    }
+    .experience-main{
+      justify-content: flex-start !important;
+      margin-top: 2em;
+      margin-left: 10px;
+    }
+    .panel{
+      max-height: 250px !important;
+      overflow: auto !important;
     }
 }
 @media (min-width: 601px) and (max-width: 1208px){
@@ -649,6 +706,19 @@ h3.main-hero-subtitle{
   }
 }
 
+@media (max-width: 1106px){
+  .show-about-me{
+    width: 80%;
+    height: 75%;
+  }
+}
+
+@media (max-width: 1230px){
+  .about-me-left, .about-me-right {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 1060px) {
     .show-about-me{
     height: 90%;
@@ -657,12 +727,13 @@ h3.main-hero-subtitle{
     }
 }
 
+
 .experience-main{
   height: 60vh;
-  overflow: auto;
   display: flex;
-  align-items: center;
   padding: 4em;
+  flex-direction: column;
+  justify-content: center;
 }
 /* .timeline{
   margin-top: 54px;
@@ -696,6 +767,7 @@ h3.main-hero-subtitle{
 
 .experience-item{
   margin-bottom: 2em;
+  max-width: 90%;
 }
 
 .experience-item-header {
@@ -734,4 +806,49 @@ h3.main-hero-subtitle{
 
 #backToTop{
   transition: all .5s;
+}
+
+.accordion {
+  color: #F0EDCF;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.accordion .job-title{
+  font-size: 1.2em;
+  line-height: 2em;
+}
+.experience-main ul{
+  list-style-type: disc;
+}
+/* .active, .accordion:hover {
+  background-color: #ccc;
+} */
+
+/* .accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+} */
+
+.panel {
+  padding: 0 18px;
+  color: #F0EDCF;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.single-experience:first-child{
+  padding-bottom: 1em;
 }
