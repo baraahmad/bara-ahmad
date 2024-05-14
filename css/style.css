@@ -59,21 +59,9 @@ p, li{
     line-height: 1.5em;
 }
 
-/* body::after {
-    content: "";
-    background-image: url(../images/logo.svg);
-    opacity: 0.02;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-  } */
-
   #page-wrap{
     width: 100%;
     min-height: 100%;
-    /* background-color: #F0EDCF; */
     z-index: 0;
     position: absolute;
   }
@@ -198,16 +186,6 @@ section{
     height: 100%;
 }
 
-/* .main-hero-content{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding-left: 70px;
-    height: 100%;
-    justify-content: center;
-} */
-
-
 h1.main-hero-title{
     font-size: 3.5rem;
     margin: 0;
@@ -232,10 +210,6 @@ h3.main-hero-subtitle{
     cursor: pointer;
     width: 175px;
     text-align: center;
-    /* position: fixed;
-    top: 73%;
-    left: 18%; */
-    /* transform: translate(-34%, -50%); */
 }
 
 .link_wrapper{
@@ -247,11 +221,8 @@ h3.main-hero-subtitle{
     font-weight: bold;
     letter-spacing: 3px;
     padding: 12px 20px;
-    /* background-color: #0B60B0;
-    background: linear-gradient(180deg, #0B60B0, #40A2D8); */
     background-color: #000000;
     color: #F0EDCF;
-    /* color: #000000; */
     text-decoration: none;
     transition: all .35s;
     border: 3px solid transparent;
@@ -261,7 +232,6 @@ h3.main-hero-subtitle{
 .about-me-btn .icon{
     width: 50px;
     height: 50px;
-    /* border: 3px solid transparent; */
     position: absolute;
     transform: rotate(45deg);
     right: 0;
@@ -281,14 +251,12 @@ h3.main-hero-subtitle{
   }
   
   .about-me-btn a:hover{
-    /* width: 200px; */
     border: 3px solid #0B60B0;
     background: transparent;
     color: #F0EDCF;
   }
   
   .about-me-btn a:hover + .icon{
-    /* border: 3px solid #0B60B0; */
     right: -22%;
   }
 
@@ -438,42 +406,6 @@ h3.main-hero-subtitle{
     }
 }
 
-/* .close-container{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .leftright{
-    height: 4px;
-    width: 40px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: #F0EDCF;
-    border-radius: 2px;
-    transform: rotate(45deg);
-  }
-  
-  .rightleft{
-    height: 4px;
-    width: 40px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: #F0EDCF;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-  }
-
-  .close-container:hover .leftright{
-    transform: rotate(-45deg);
-    background-color: #0B60B0;
-  }
-  .close-container:hover .rightleft{
-    transform: rotate(45deg);
-    background-color: #0B60B0;
-  } */
-
   .close-container{
     width: 40px;
     height: 50px;
@@ -611,32 +543,6 @@ h3.main-hero-subtitle{
         z-index: 45;
         display: block;
     }
-    /* .mobile-nav-show::before{
-        transition-delay: .25s;
-        background-color: #f06449;
-        background: linear-gradient(270deg, #f06449, #ee2828);
-        z-index: 24;
-        transform: translateX(0);
-        transition-delay: 0s;
-    }
-    .mobile-nav-show::after{
-        transition-delay: .15s;
-        transform: translateX(0);
-        will-change: transform;
-        background: linear-gradient(270deg, #235aa6, #101b3b);
-        z-index: 25;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-        transition: -webkit-transform .45s cubic-bezier(.694,.048,.335,1);
-        transition: transform .45s cubic-bezier(.694,.048,.335,1);
-        transition: transform .45s cubic-bezier(.694,.048,.335,1), -webkit-transform .45s cubic-bezier(.694,.048,.335,1);
-    } */
    .mobile-nav-links{
     list-style: none;
     color: #F0EDCF;
@@ -735,9 +641,6 @@ h3.main-hero-subtitle{
   flex-direction: column;
   justify-content: center;
 }
-/* .timeline{
-  margin-top: 54px;
-} */
 .experience li{
   list-style: inside;
 }
@@ -789,7 +692,6 @@ h3.main-hero-subtitle{
 		visibility var(--trans-dur) steps(1,end);
 }
 
-/* Expanded state */
 .experience-item-body--expanded {
 	height: auto;
 }
@@ -825,21 +727,6 @@ h3.main-hero-subtitle{
 .experience-main ul{
   list-style-type: disc;
 }
-/* .active, .accordion:hover {
-  background-color: #ccc;
-} */
-
-/* .accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-} */
 
 .panel {
   padding: 0 18px;
