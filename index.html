@@ -50,7 +50,10 @@
                      <a href="#Experience">Experience</a>
                  </li>
                  <li>
-                    <a onclick="AboutMe()">Contact</a>
+                    <a href="#Works">Works</a>
+                </li>
+                 <li>
+                    <a onclick="AboutMeMobile()">Contact</a>
                  </li>
             </ul>
         </nav>
@@ -279,11 +282,13 @@
                 $('#about-me-right').removeClass('hide-about-me-right');
                 $('body').css({ "overflow-y": "hidden"});
                 isVisible= true;
-            
+        }
+        function AboutMeMobile(){
+            CloseMobileNav();
+            AboutMe();
         }
         function CloseAboutMe(){
             if(isVisible){
-               
                 $('#about-me').addClass('hide-about-me');
                 $('#about-me-left').removeClass('about-me-left');
                 $('#about-me-left').addClass('hide-about-me-left');
@@ -307,7 +312,7 @@
             $('.mobile-nav').css('display', 'none');
             
         }
-        $('.mobile-nav-links a').on("click", function(){
+        $('.mobile-nav-links li a').on("click", function(){
             CloseMobileNav();
         }); 
 
