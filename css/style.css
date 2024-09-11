@@ -829,10 +829,17 @@ cursor: pointer;
       overflow-y: auto;
   }
 
-  #Experience .content{
+  #Experience .content, #Works .content{
     flex-direction: column;
     padding-left: 0px;
   }
+  .funfunboating-img, .kavachai-img {
+    width: 40%;
+}
+.single-work{
+  width: 75%;
+  margin: 8px;
+}
   #Experience .experience-main{
     padding: 0px;
   }
