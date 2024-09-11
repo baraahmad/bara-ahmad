@@ -17,7 +17,6 @@
 
 body {
   margin:0px;
-  width:100vw;
   height:100vh;
   background-color: #F0EDCF;
   overflow-x: hidden;
@@ -111,23 +110,28 @@ i{
     justify-content: center;
 }
 
+/* #Works .content{
+  flex-direction: row;
+  align-items: center;
+} */
+
 #Experience{
   position: relative;
 }
-#Experience .content{
+#Experience .content, #Works .content{
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
 
-#Experience .icon{
+#Experience .icon, #Works .icon{
   position: absolute;
   right: 5px;
   top: 5px;
   width: 35px;
   height: 35px;
 }
-#Experience svg{
+#Experience svg, #Works svg{
   fill: #0B60B0;
   transform: rotate(270deg);
 }
@@ -178,10 +182,17 @@ header.main-hero{
 
 section{
   height: 100vh;
+  
+}
+section#Experience{
   background-color: #000000;
   color: #F0EDCF;
 }
 
+section#Works{
+  background-color: #F0EDCF;
+  color: #000000;
+}
 .main-hero-text{
     height: 100%;
 }
@@ -506,132 +517,21 @@ h3.main-hero-subtitle{
   }
 
 
-  @media (max-width: 600px) {
-    .nav-logo img{
-      height: 60px;
-      width: 60px;
-    }
-    .nav-logo{
-      padding-left: 10px;
-    }
-    .mobile-toggle{
-      padding-right: 10px;
-    }
-    h1{
-      font-size: 1.6em !important;
-    }
-    h3.main-hero-subtitle{
-      font-size: 1.2em;
-    }
-    .mobile-menu-icon{
-        display: inline-block;
-        width: 42px;
-        height: 25px;
-        cursor: pointer;
-        vertical-align: middle;
-    }
-    .nav-links{
-        display: none;
-    }
-    .mobile-nav .close-container{
-        margin-right: 7px;
-        margin-top: 10px;
-    }
-    .mobile-nav-show{
-        visibility: visible;
-        transition-delay: .1s;
-        z-index: 45;
-        display: block;
-    }
-   .mobile-nav-links{
-    list-style: none;
-    color: #F0EDCF;
-    margin-left: 44px;
-    font-size: 1.6em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-   }
 
-   .mobile-nav-links a,.mobile-nav-links a:link,.mobile-nav-links a:visited,.mobile-nav-links a:focus,.mobile-nav-links a:hover,.mobile-nav-links a:active{
-    color: #F0EDCF;
-    text-decoration: none; 
-  }
-  .content{
-    padding-left: 60px;
-  }
-  .experience-title{
-    align-self: baseline;
-    padding-top: 20px;
-    padding-left: 10px;
-  }
-    .about-me-left, .about-me-right{
-        padding: 20px;
-        overflow: hidden;
-    }
-    .about-me-left{
-      height: 50%;
-    }
-    .about-me-text{
-      height: 100%;
-    }
-  
-    .about-me-left-container{
-        height: 100%;
-        overflow-y: auto;
-    }
 
-    #Experience .content{
-      flex-direction: column;
-      padding-left: 0px;
-    }
-    #Experience .experience-main{
-      padding: 0px;
-    }
-    .experience-main{
-      justify-content: flex-start !important;
-      margin-top: 2em;
-      margin-left: 10px;
-    }
-    .panel{
-      max-height: 250px !important;
-      overflow: auto !important;
-    }
-}
-@media (min-width: 601px) and (max-width: 1208px){
-  .nav-content{
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .experience-main{
-    height: auto;
-    max-height: 90vh;
-    padding: 2em;
-  }
+.works-div{
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 1106px){
-  .show-about-me{
-    width: 80%;
-    height: 75%;
-  }
+.project-card{
+  height: 100px;
+  width: 25%;
+  border-radius: 12px;
+  background-color: #40A2D8;
+  margin-right: 2em;
 }
 
-@media (max-width: 1230px){
-  .about-me-left, .about-me-right {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 1060px) {
-    .show-about-me{
-    height: 90%;
-    max-height: 815px;
-    flex-direction: column-reverse;
-    }
-}
 
 
 .experience-main{
@@ -640,6 +540,109 @@ h3.main-hero-subtitle{
   padding: 4em;
   flex-direction: column;
   justify-content: center;
+}
+
+.works-main{
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  padding: 4em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.single-work-bg{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  border-radius: 12px;
+  opacity: .3;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+cursor: pointer;
+}
+
+.in4ma-container{
+  background-image: url('../images/in4ma.jpg');
+}
+.child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.single-work:hover .child, .single-work:focus .child {
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.single-work:hover .child:before, .single-work:focus .child:before {
+  display: block;
+}
+
+.single-work:hover a, .single-work:focus a {
+  display: block;
+}
+
+.child:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(11, 96, 176,0.75);
+}
+
+.works-main img{
+  cursor: pointer;
+}
+
+.work-link{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.funfunboating-container{
+  background-image: url('../images/funfunboating.jpg');
+}
+.kavachai-container{
+  background-image: url('../images/kava&chai.jpg');
+}
+
+.single-work{
+  width: 25%;
+  height: 100%;
+  border-radius: 12px;
+  margin: 40px;
+  /* background-color: #40A2D8; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.single-work img{
+  position: absolute;
+}
+.in4ma-img{
+  width: 85%;
+}
+.funfunboating-img, .kavachai-img{
+  width: 60%;
 }
 .experience li{
   list-style: inside;
@@ -708,6 +711,11 @@ h3.main-hero-subtitle{
 
 #backToTop{
   transition: all .5s;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+
 }
 
 .accordion {
@@ -738,4 +746,143 @@ h3.main-hero-subtitle{
 
 .single-experience:first-child{
   padding-bottom: 1em;
+}
+
+@media (max-width: 600px) {
+  .works-main{
+    height: 70vh;
+    flex-direction: column;
+  }
+  .nav-logo img{
+    height: 60px;
+    width: 60px;
+  }
+  .nav-logo{
+    padding-left: 10px;
+  }
+  .mobile-toggle{
+    padding-right: 10px;
+  }
+  h1{
+    font-size: 1.6em !important;
+  }
+  h3.main-hero-subtitle{
+    font-size: 1.2em;
+  }
+  .mobile-menu-icon{
+      display: inline-block;
+      width: 42px;
+      height: 25px;
+      cursor: pointer;
+      vertical-align: middle;
+  }
+  .nav-links{
+      display: none;
+  }
+  .mobile-nav .close-container{
+      margin-right: 7px;
+      margin-top: 10px;
+  }
+  .mobile-nav-show{
+      visibility: visible;
+      transition-delay: .1s;
+      z-index: 45;
+      display: block;
+  }
+ .mobile-nav-links{
+  list-style: none;
+  color: #F0EDCF;
+  margin-left: 44px;
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+ }
+
+ .mobile-nav-links a,.mobile-nav-links a:link,.mobile-nav-links a:visited,.mobile-nav-links a:focus,.mobile-nav-links a:hover,.mobile-nav-links a:active{
+  color: #F0EDCF;
+  text-decoration: none; 
+}
+.content{
+  padding-left: 60px;
+}
+.title{
+  align-self: baseline;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+  .about-me-left, .about-me-right{
+      padding: 20px;
+      overflow: hidden;
+  }
+  .about-me-left{
+    height: 50%;
+  }
+  .about-me-text{
+    height: 100%;
+  }
+
+  .about-me-left-container{
+      height: 100%;
+      overflow-y: auto;
+  }
+
+  #Experience .content{
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  #Experience .experience-main{
+    padding: 0px;
+  }
+  .experience-main{
+    justify-content: flex-start !important;
+    margin-top: 2em;
+    margin-left: 10px;
+  }
+  .panel{
+    max-height: 250px !important;
+    overflow: auto !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 1208px){
+.nav-content{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.experience-main{
+  height: auto;
+  max-height: 90vh;
+  padding: 2em;
+}
+.works-main{
+  height: 70vh;
+  flex-direction: column;
+}
+}
+
+@media (max-width: 1106px){
+.works-main{
+  height: 70vh;
+  flex-direction: column;
+}
+.show-about-me{
+  width: 80%;
+  height: 75%;
+}
+}
+
+@media (max-width: 1230px){
+.about-me-left, .about-me-right {
+  padding: 30px;
+}
+}
+
+@media (max-width: 1060px) {
+  .show-about-me{
+  height: 90%;
+  max-height: 815px;
+  flex-direction: column-reverse;
+  }
 }
