@@ -34,7 +34,7 @@
                         <a href="#Works">Works</a>
                     </li>
                     <li>
-                        <a>Contact</a>
+                        <a onclick="AboutMe()">Contact</a>
                     </li>
                 </ul>
                
@@ -50,7 +50,7 @@
                      <a href="#Experience">Experience</a>
                  </li>
                  <li>
-                     <a>Contact</a>
+                    <a onclick="AboutMe()">Contact</a>
                  </li>
             </ul>
         </nav>
@@ -142,7 +142,7 @@
                 </div>
             </a>
             <div class="content">
-                <div class="experience-title">
+                <div class="title">
                     <h1>Experience</h1>
                 </div>
                 
@@ -181,27 +181,71 @@
                 </div>
             </div>
         </section>
-        
-        <div class="summary-container" style="display: none;">
-            <h2>
-                WHAT I DO
-            </h2>
-            <div class="summary-divs">
-                <div>
-                    <img />
-                    <h3> Responsive Mobile </h3>
-                    <p>
-    
-                    </p>
+
+        <section id="Works" class="works">
+            <a href="#Main" id="backToTop" style="display: none;">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                    <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                    </svg>
                 </div>
-                <div>
-    
+            </a>
+            <div class="content">
+                <div class="title">
+                    <h1>Works</h1>
                 </div>
-                <div>
-    
+                <div class="works-main">
+                        <div class="single-work">
+                            <a class="work-link" href="https://in4ma.com/index.html" target="_blank"></a>
+                            <div class="single-work-bg">
+                                <div class="child in4ma-container">
+                                </div>
+                            </div>
+                            <img class="in4ma-img" src="./images/In4ma.png" alt="In4ma logo"/>
+                        </a>
+                        </div>
+                    
+                    <div class="single-work">
+                        <a class="work-link" href="https://web.archive.org/web/20180824190427/http://funfunboating.com/gallery.html" target="_blank"></a>
+                        <div class="single-work-bg">
+                            <div class="child funfunboating-container">
+                            </div>
+                        </div>
+                        <img class="funfunboating-img" src="./images/funfunboating.png" alt="funfunboating logo" />
+                    </div>
+                    <div class="single-work">
+                        <a class="work-link" href="https://web.archive.org/web/20230329125806/https://kavaandchai.com/" target="_blank"></a>
+                        <div class="single-work-bg">
+                            <div class="child kavachai-container">
+                            </div>
+                        </div>
+                        <img class="kavachai-img" src="./images/kava&chai.png" alt="Kava & Chai logo" />
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <!-- <section id="Works" class="works">
+            <div class="content">
+                <div class="title">
+                    <h1>
+                        Works
+                    </h1>
+                </div>
+                <div class="works-div">
+                    <div class="project-card">
+                        IN4MA
+                    </div>
+                    <div class="project-card">
+                        funfunboating
+                    </div>
+                    <div class="project-card">
+                        kava&chai
+                    </div>
+                </div>
+            </div>
+            
+        </section> -->
     </div>
      <script>
         var acc = document.getElementsByClassName("accordion");
